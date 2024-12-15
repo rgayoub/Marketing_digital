@@ -1,0 +1,32 @@
+<svg width="96" height="104" viewBox="0 0 96 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond circulaire -->
+  <g filter="url(#filter0_d)">
+    <circle cx="48" cy="48" r="32" fill="url(#paint0_linear)" />
+  </g>
+  
+  <!-- Papier -->
+  <rect x="32" y="30" width="32" height="40" rx="4" fill="white" />
+  <line x1="36" y1="40" x2="60" y2="40" stroke="#FF4361" stroke-width="2" />
+  <line x1="36" y1="48" x2="60" y2="48" stroke="#FF4361" stroke-width="2" />
+  <line x1="36" y1="56" x2="52" y2="56" stroke="#FF4361" stroke-width="2" />
+  
+  <!-- Stylo -->
+  <path d="M56 64L68 52L72 56L60 68L56 64Z" fill="#FF416C" />
+  <path d="M72 56L70 54L68 56L70 58L72 56Z" fill="#FF4B2B" />
+  
+  <!-- Dégradé -->
+  <defs>
+    <filter id="filter0_d" x="0" y="9" width="96" height="96" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feOffset dy="4" />
+      <feGaussianBlur stdDeviation="6" />
+      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.266667 0 0 0 0 0.341176 0 0 0 0.3 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+    <linearGradient id="paint0_linear" x1="48" y1="16" x2="48" y2="80" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF416C"/>
+      <stop offset="1" stop-color="#FF4B2B"/>
+    </linearGradient>
+  </defs>
+</svg>

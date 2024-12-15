@@ -1,0 +1,30 @@
+{
+  "name": "agency-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@fortawesome/free-solid-svg-icons": "^6.7.1",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@mui/icons-material": "^6.2.0",
+    "next": "13.4.19",
+    "rc-drawer": "^6.4.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
+    "react-multi-carousel": "^2.8.5",
+    "react-scroll": "^1.8.9",
+    "react-slick": "^0.30.2",
+    "react-stickynode": "^4.1.0",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^9.4.1",
+    "theme-ui": "^0.16.2"
+  }
+}
