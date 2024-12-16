@@ -31,13 +31,13 @@ export default function Home() {
           <Banner />
           <KeyFeature />
           <ServiceSection />
-          <Feature />
-          <CoreFeature />
+          {/* <Feature /> */}
+          {/* <CoreFeature /> */}
           <WorkFlow />
-          <Package />
-          <TeamSection />
-          <TestimonialCard />
+          {/* <TeamSection /> */}
           <BlogSection />
+          <Package />
+          <TestimonialCard />
           <Subscribe />
         </Layout>
       </StickyProvider>

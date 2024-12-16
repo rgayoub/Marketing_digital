@@ -1,5 +1,5 @@
 import { Container, Box, Flex } from 'theme-ui';
-import { keyframes } from '@emotion/react'
+import { keyframes } from '@emotion/react';
 import React, { useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import PriceCard from '../components/price-card';
@@ -11,253 +11,110 @@ const packages = {
   monthly: [
     {
       id: 1,
-      name: 'Free Plan',
-      description: 'For Small teams or office',
-      buttonText: 'Start free trail',
-      priceWithUnit: '$0',
+      name: 'Design Essentiel',
+      description: 'Services de design de base pour petits projets',
+      buttonText: 'Commencer l\'essai gratuit',
+      priceWithUnit: 'Gratuit',
       points: [
-        {
-          id: 1,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'Drag & Drop Builder',
-          isAvailable: true,
-        },
-        {
-          id: 2,
-          icon: <IoIosCheckmarkCircle />,
-          text: "1,000's of Templates",
-          isAvailable: true,
-        },
-        {
-          id: 3,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'Blog Support Tools',
-          isAvailable: true,
-        },
-        {
-          id: 4,
-          icon: <IoIosCloseCircle />,
-          text: 'eCommerce Store ',
-          isAvailable: true,
-        },
+        { id: 1, icon: <IoIosCheckmarkCircle />, text: 'Création de logo', isAvailable: true },
+        { id: 2, icon: <IoIosCheckmarkCircle />, text: 'Branding de base', isAvailable: true },
+        { id: 3, icon: <IoIosCheckmarkCircle />, text: 'Graphismes pour réseaux sociaux', isAvailable: true },
+        { id: 4, icon: <IoIosCloseCircle />, text: 'Illustrations personnalisées', isAvailable: false },
       ],
     },
     {
       id: 2,
-      name: 'Business king',
-      description: 'For Enterprise business',
-      priceWithUnit: '$15',
-      buttonText: 'Create account',
-      anotherOption: 'Or Start 14 Days trail',
+      name: 'Créateur de Contenu Pro',
+      description: 'Création de contenu avancée pour entreprises',
+      priceWithUnit: '15€',
+      buttonText: 'Créer un compte',
+      anotherOption: 'Ou commencez un essai gratuit de 14 jours',
       points: [
-        {
-          id: 1,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'Drag & Drop Builder',
-          isAvailable: true,
-        },
-        {
-          id: 2,
-          icon: <IoIosCheckmarkCircle />,
-          text: "1,000's of Templates",
-          isAvailable: true,
-        },
-        {
-          id: 3,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'Blog Support Tools',
-          isAvailable: true,
-        },
-        {
-          id: 4,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'eCommerce Store ',
-          isAvailable: true,
-        },
+        { id: 1, icon: <IoIosCheckmarkCircle />, text: 'Stratégie de contenu', isAvailable: true },
+        { id: 2, icon: <IoIosCheckmarkCircle />, text: 'Production vidéo', isAvailable: true },
+        { id: 3, icon: <IoIosCheckmarkCircle />, text: 'Contenu optimisé SEO', isAvailable: true },
+        { id: 4, icon: <IoIosCheckmarkCircle />, text: 'Gestion de communauté', isAvailable: true },
       ],
     },
     {
       id: 3,
-      header: 'Suggested',
+      header: 'Suggéré',
       headerIcon: <IoIosCheckmarkCircle />,
-      name: 'Pro Master',
-      description: 'For pro level developers',
-      priceWithUnit: '$24',
-      buttonText: 'Create account',
-      anotherOption: 'Or Start 14 Days trail',
+      name: 'Pack Complet',
+      description: 'Pour des services multimédia complets',
+      priceWithUnit: '24€',
+      buttonText: 'Créer un compte',
+      anotherOption: 'Ou commencez un essai gratuit de 14 jours',
       points: [
-        {
-          id: 1,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'Drag & Drop Builder',
-          isAvailable: true,
-        },
-        {
-          id: 2,
-          icon: <IoIosCheckmarkCircle />,
-          text: "1,000's of Templates",
-          isAvailable: true,
-        },
-        {
-          id: 3,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'Blog Support Tools',
-          isAvailable: true,
-        },
-        {
-          id: 4,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'eCommerce Store ',
-          isAvailable: true,
-        },
+        { id: 1, icon: <IoIosCheckmarkCircle />, text: 'Marketing vidéo', isAvailable: true },
+        { id: 2, icon: <IoIosCheckmarkCircle />, text: 'Design graphique', isAvailable: true },
+        { id: 3, icon: <IoIosCheckmarkCircle />, text: 'Création de contenu personnalisé', isAvailable: true },
+        { id: 4, icon: <IoIosCheckmarkCircle />, text: 'Engagement de communauté', isAvailable: true },
       ],
     },
   ],
   annual: [
     {
       id: 1,
-      name: 'Free Plan',
-      description: 'For Small teams or office',
-      buttonText: 'Start free trail',
-      priceWithUnit: '$0',
+      name: 'Design Essentiel',
+      description: 'Services de design de base pour petits projets',
+      buttonText: 'Commencer l\'essai gratuit',
+      priceWithUnit: 'Gratuit',
       points: [
-        {
-          id: 1,
-          icon: <IoIosCheckmarkCircle />,
-          text: "1,000's of Templates",
-          isAvailable: true,
-        },
-        {
-          id: 2,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'Drag & Drop Builder',
-          isAvailable: true,
-        },
-        {
-          id: 3,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'Blog Support Tools',
-          isAvailable: true,
-        },
-        {
-          id: 4,
-          icon: <IoIosCloseCircle />,
-          text: 'eCommerce Store ',
-          isAvailable: true,
-        },
+        { id: 1, icon: <IoIosCheckmarkCircle />, text: 'Création de logo', isAvailable: true },
+        { id: 2, icon: <IoIosCheckmarkCircle />, text: 'Branding de base', isAvailable: true },
+        { id: 3, icon: <IoIosCheckmarkCircle />, text: 'Graphismes pour réseaux sociaux', isAvailable: true },
+        { id: 4, icon: <IoIosCloseCircle />, text: 'Illustrations personnalisées', isAvailable: false },
       ],
     },
     {
       id: 2,
-      name: 'Business king',
-      description: 'For Enterprise business',
-      priceWithUnit: '$25',
-      buttonText: 'Create account',
-      anotherOption: 'Or Start 10 Days trail',
+      name: 'Créateur de Contenu Pro',
+      description: 'Création de contenu avancée pour entreprises',
+      priceWithUnit: '25€',
+      buttonText: 'Créer un compte',
+      anotherOption: 'Ou commencez un essai gratuit de 10 jours',
       points: [
-        {
-          id: 1,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'eCommerce Store',
-          isAvailable: true,
-        },
-        {
-          id: 2,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'Blog Support Tools',
-          isAvailable: true,
-        },
-        {
-          id: 3,
-          icon: <IoIosCheckmarkCircle />,
-          text: "1,000's of Templates",
-          isAvailable: true,
-        },
-        {
-          id: 4,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'Drag & Drop Builder ',
-          isAvailable: true,
-        },
+        { id: 1, icon: <IoIosCheckmarkCircle />, text: 'Stratégie de contenu', isAvailable: true },
+        { id: 2, icon: <IoIosCheckmarkCircle />, text: 'Production vidéo', isAvailable: true },
+        { id: 3, icon: <IoIosCheckmarkCircle />, text: 'Contenu optimisé SEO', isAvailable: true },
+        { id: 4, icon: <IoIosCheckmarkCircle />, text: 'Gestion de communauté', isAvailable: true },
       ],
     },
     {
       id: 3,
-      header: 'Suggested',
+      header: 'Suggéré',
       headerIcon: <IoIosCheckmarkCircle />,
-      name: 'Pro Master',
-      description: 'For pro level developers',
-      priceWithUnit: '$39',
-      buttonText: 'Create account',
-      anotherOption: 'Or Start 10 Days trail',
+      name: 'Pack Complet',
+      description: 'Pour des services multimédia complets',
+      priceWithUnit: '39€',
+      buttonText: 'Créer un compte',
+      anotherOption: 'Ou commencez un essai gratuit de 10 jours',
       points: [
-        {
-          id: 1,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'eCommerce Store',
-          isAvailable: true,
-        },
-        {
-          id: 2,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'Blog Support Tools',
-          isAvailable: true,
-        },
-        {
-          id: 3,
-          icon: <IoIosCheckmarkCircle />,
-          text: "1,000's of Templates",
-          isAvailable: true,
-        },
-        {
-          id: 4,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'Drag & Drop Builder ',
-          isAvailable: true,
-        },
+        { id: 1, icon: <IoIosCheckmarkCircle />, text: 'Marketing vidéo', isAvailable: true },
+        { id: 2, icon: <IoIosCheckmarkCircle />, text: 'Design graphique', isAvailable: true },
+        { id: 3, icon: <IoIosCheckmarkCircle />, text: 'Création de contenu personnalisé', isAvailable: true },
+        { id: 4, icon: <IoIosCheckmarkCircle />, text: 'Engagement de communauté', isAvailable: true },
       ],
     },
   ],
 };
 
 const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3,
-    draggable: false,
-  },
-  tablet: {
-    breakpoint: { max: 1023, min: 640 },
-    items: 2,
-    draggable: true,
-  },
-  mobile: {
-    breakpoint: { max: 639, min: 0 },
-    items: 1,
-    draggable: true,
-  },
+  desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3, draggable: false },
+  tablet: { breakpoint: { max: 1023, min: 640 }, items: 2, draggable: true },
+  mobile: { breakpoint: { max: 639, min: 0 }, items: 1, draggable: true },
 };
 
 export default function Package() {
   const { monthly, annual } = packages;
-  const [state, setState] = useState({
-    active: 'monthly',
-    pricingPlan: monthly,
-  });
+  const [state, setState] = useState({ active: 'monthly', pricingPlan: monthly });
 
   const handlePricingPlan = (plan) => {
     if (plan === 'annual') {
-      setState({
-        ...state,
-        active: 'annual',
-        pricingPlan: annual,
-      });
+      setState({ ...state, active: 'annual', pricingPlan: annual });
     } else {
-      setState({
-        ...state,
-        active: 'monthly',
-        pricingPlan: monthly,
-      });
+      setState({ ...state, active: 'monthly', pricingPlan: monthly });
     }
   };
 
@@ -287,37 +144,31 @@ export default function Package() {
   return (
     <Box id="pricing" sx={{ variant: 'section.pricing' }}>
       <Container>
-        <SectionHeader
-          slogan="Pricing Plan"
-          title="Choose your pricing policy"
-        />
+        <SectionHeader slogan="Plan Tarifaire" title="Choisissez votre politique tarifaire" />
         <Flex sx={styles.buttonGroup}>
           <Box sx={styles.buttonGroupInner}>
             <button
               className={state.active === 'monthly' ? 'active' : ''}
               type="button"
-              aria-label="Monthly"
+              aria-label="Plan mensuel"
               onClick={() => handlePricingPlan('monthly')}
             >
-              Monthly Plan
+              Plan Mensuel
             </button>
             <button
               className={state.active === 'annual' ? 'active' : ''}
               type="button"
-              aria-label="Annual"
+              aria-label="Annuel"
               onClick={() => handlePricingPlan('annual')}
             >
-              Annual Plan
+              Plan Annuel
             </button>
           </Box>
         </Flex>
         <Box sx={styles.pricingWrapper} className="pricing__wrapper">
           <Carousel {...sliderParams}>
             {state.pricingPlan.map((packageData) => (
-              <Box
-                sx={styles.pricingItem}
-                key={`${state.active}-card--key${packageData.id}`}
-              >
+              <Box sx={styles.pricingItem} key={`${state.active}-card--key${packageData.id}`}>
                 <PriceCard data={packageData} />
               </Box>
             ))}
@@ -336,13 +187,14 @@ const fadeIn = keyframes`
     opacity: 1;
   }
 `;
+
 const fadeIn2 = keyframes`
   from {
     transform: translateY(50%);
     opacity: 0;
   }
   to {
-		transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 `;

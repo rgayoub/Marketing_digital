@@ -1,4 +1,4 @@
-import { Container, Box } from 'theme-ui';
+import { Container, Box, Button } from 'theme-ui';
 import SectionHeader from 'components/section-header';
 import PostCard from 'components/post-card.js';
 import ButtonGroup from 'components/button-group';
@@ -6,43 +6,47 @@ import Carousel from 'react-multi-carousel';
 import PostThumb1 from 'assets/blog/1.jpg';
 import PostThumb2 from 'assets/blog/2.jpg';
 import PostThumb3 from 'assets/blog/3.jpg';
+import { useRouter } from "next/navigation";
+
 
 const data = [
   {
     id: 1,
     imgSrc: PostThumb3,
     altText: 'Marketing',
-    postLink: '#',
-    title: 'Product Marketing: Monopoly Market',
-    authorName: 'Garth Wenona',
-    date: 'Sep 23, 2023',
+    title: 'Design',
+    postLink: '/design', // Lien propre pour chaque carte
   },
   {
     id: 2,
     imgSrc: PostThumb1,
     altText: 'Creative',
-    postLink: '#',
-    title: 'Product Marketing: Creative Market',
-    authorName: 'Maegan Blessing',
-    date: 'Jan 25, 2023',
+    title: 'Création de contenu',
+    postLink: '/creative', // Lien propre pour chaque carte
+
   },
   {
     id: 3,
     imgSrc: PostThumb2,
     altText: 'Startup',
-    postLink: '#',
-    title: 'Product Marketing: Startup Product Sales',
-    authorName: 'Cletus Dorian',
-    date: 'Feb 21, 2022',
+    title: 'Infographie',
+    postLink: '/infographie', // Lien propre pour chaque carte
   },
   {
     id: 4,
     imgSrc: PostThumb1,
     altText: 'Creative',
-    postLink: '#',
-    title: 'Product Marketing: Creative Market',
-    authorName: 'Vanessa Essence',
-    date: 'Dec 29, 2023',
+    title: 'Community Management',
+    postLink: '/creative', // Lien propre pour chaque carte
+
+  },
+  {
+    id: 5,
+    imgSrc: PostThumb1,
+    altText: 'Creative2',
+    title: 'Production audiovisuelle',
+    postLink: '/audiovisuelle', // Lien propre pour chaque carte
+
   },
 ];
 
@@ -50,26 +54,54 @@ const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1310 },
     items: 3,
-    slidesToSlide: 3, // optional, default to 1.
+    slidesToSlide: 3, 
   },
   laptop: {
     breakpoint: { max: 1310, min: 1024 },
     items: 3,
-    slidesToSlide: 3, // optional, default to 1.
+    slidesToSlide: 3, 
   },
   tablet: {
     breakpoint: { max: 1024, min: 640 },
     items: 2,
-    slidesToSlide: 2, // optional, default to 1.
+    slidesToSlide: 2,
   },
   mobile: {
     breakpoint: { max: 639, min: 0 },
     items: 1,
-    slidesToSlide: 1, // optional, default to 1.
+    slidesToSlide: 1,
+  },
+};
+
+const styles = {
+  carouselWrapper: {
+    '.carousel-container': {
+      mx: -3,
+    },
+  },
+  cardWrapper: {
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: '10px',
+  },
+  cardButton: {
+    backgroundColor: 'primary',
+    color: 'white',
+    padding: '10px 20px',
+    borderRadius: '5px',
+    marginTop: '-60px',
   },
 };
 
 export default function BlogSection() {
+  const router = useRouter();
+
+  const handleContactClick = (link) => {
+    router.push(link); // Redirige vers la route correcte
+  };
   return (
     <Box sx={{ variant: 'section.news' }}>
       <Container>
@@ -77,7 +109,6 @@ export default function BlogSection() {
           slogan="our blog"
           title="Explore our products for your business solution"
         />
-
         <Box sx={styles.carouselWrapper}>
           <Carousel
             additionalTransfrom={0}
@@ -102,15 +133,19 @@ export default function BlogSection() {
             slidesToSlide={1}
           >
             {data.map((item) => (
-              <PostCard
-                key={item.id}
-                src={item.imgSrc}
-                alt={item.altText}
-                postLink={item.postLink}
-                title={item.title}
-                authorName={item.authorName}
-                date={item.date}
-              />
+              <Box key={item.id} sx={styles.cardWrapper}>
+                <PostCard
+                  src={item.imgSrc}
+                  alt={item.altText}
+                  postLink={item.postLink}
+                  title={item.title}
+                />
+               <Button 
+                  sx={styles.cardButton} 
+                  onClick={() => handleContactClick(item.postLink)} // Passer le lien spécifique ici
+                >
+                  Learn More
+                </Button>              </Box>
             ))}
           </Carousel>
         </Box>
@@ -118,11 +153,3 @@ export default function BlogSection() {
     </Box>
   );
 }
-
-const styles = {
-  carouselWrapper: {
-    '.carousel-container': {
-      mx: -3,
-    },
-  },
-};

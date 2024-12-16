@@ -7,39 +7,39 @@ import ArrowEven from 'assets/arrowEven.svg';
 const data = [
   {
     id: 1,
-    title: 'Set disbursement Instructions',
+    title: 'Stratégie de Contenu',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Développez une stratégie de contenu engageante pour attirer et fidéliser votre audience cible grâce à des articles, vidéos et infographies percutants.',
   },
   {
     id: 2,
-    title: 'Assembly retrieves funds from your account',
+    title: 'Optimisation SEO',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Améliorez votre visibilité sur les moteurs de recherche grâce à des techniques d’optimisation SEO adaptées pour positionner votre site en tête des résultats.',
   },
   {
     id: 3,
-    title: 'Assembly initiates disbursement',
+    title: 'Gestion des Réseaux Sociaux',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Créez et gérez des campagnes efficaces sur les réseaux sociaux pour renforcer votre image de marque et interagir avec votre communauté.',
   },
   {
     id: 4,
-    title: 'Customer receives funds payment',
+    title: 'Publicité Digitale (Ads)',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
-  },
+      'Maximisez votre retour sur investissement grâce à des campagnes publicitaires ciblées sur Google Ads, Facebook Ads et d’autres plateformes.',
+  },
 ];
 
 export default function WorkFlow() {
   return (
     <Box sx={styles.workflow}>
       <Container>
-        <SectionHeader
-          slogan="Whats the function"
-          title="Let’s see how it works"
+      <SectionHeader
+          slogan="Découvrez comment cela fonctionne"
+          title="Explorer les étapes"
           isWhite={true}
-        />
+        />
 
         <Grid sx={styles.grid}>
           {data.map((item) => (
