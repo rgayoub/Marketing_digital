@@ -1,13 +1,23 @@
-import { Container, Flex, Button, Box } from 'theme-ui';
-import { keyframes } from '@emotion/react'
-import { Link } from 'react-scroll';
-import Logo from 'components/logo';
-import LogoDark from 'assets/logo.svg';
-import { DrawerProvider } from '../../contexts/drawer/drawer.provider';
-import MobileDrawer from './mobile-drawer';
-import menuItems from './header.data';
+'use client'; // Composant côté client
+
+import React, { useState } from "react";
+import { Container, Flex, Box } from "theme-ui";
+import { keyframes } from "@emotion/react";
+import { Link } from "react-scroll";
+import Logo from "../../components/logo";
+import LogoDark from "../../assets/logo.svg";
+import { DrawerProvider } from "../../contexts/drawer/drawer.provider";
+import MobileDrawer from "./mobile-drawer";
+import menuItems from "./header.data";
+import { useRouter } from "next/navigation";
 
 export default function Header({ className }) {
+  const router = useRouter();
+
+  const handleContactClick = () => {
+    router.push('/contact'); // Redirige vers la route correcte
+  };
+
   return (
     <DrawerProvider>
       <Box sx={styles.header} className={className} id="header">
@@ -30,13 +40,22 @@ export default function Header({ className }) {
             ))}
           </Flex>
 
-          <Button
-            className="donate__btn"
-            variant="secondary"
-            aria-label="Get Started"
-          >
-            Contactez-nous
-          </Button>
+          <div style={{ textAlign: 'center', margin: '20px 0' }}>
+            <button
+              className="donate__btn"
+              onClick={handleContactClick}
+              style={{
+                padding: '10px 20px',
+                backgroundColor: '#6a1b9a',
+                color: '#fff',
+                border: 'none',
+                cursor: 'pointer',
+                borderRadius: '5px',
+              }}
+            >
+              Contactez-nous
+            </button>
+          </div>
 
           <MobileDrawer />
         </Container>
@@ -60,55 +79,55 @@ const positionAnim = keyframes`
 
 const styles = {
   header: {
-    color: 'text',
-    fontWeight: 'body',
+    color: "text",
+    fontWeight: "body",
     py: 4,
-    width: '100%',
-    position: 'absolute',
+    width: "100%",
+    position: "absolute",
     top: 0,
     left: 0,
-    backgroundColor: 'white',
-    transition: 'all 0.4s ease',
+    backgroundColor: "white",
+    transition: "all 0.4s ease",
     animation: `${positionAnim} 0.4s ease`,
-    '.donate__btn': {
+    ".donate__btn": {
       flexShrink: 0,
       mr: [15, 20, null, null, 0],
-      ml: ['auto', null, null, null, 0],
+      ml: ["auto", null, null, null, 0],
     },
-    '&.sticky': {
-      position: 'fixed',
-      backgroundColor: 'background',
-      color: '#000000',
-      boxShadow: '0 1px 2px rgba(0, 0, 0, 0.06)',
+    "&.sticky": {
+      position: "fixed",
+      backgroundColor: "background",
+      color: "#000000",
+      boxShadow: "0 1px 2px rgba(0, 0, 0, 0.06)",
       py: 3,
-      'nev > a': {
-        color: 'text',
+      "nav > a": {
+        color: "text",
       },
     },
   },
   container: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
   nav: {
-    mx: 'auto',
-    display: 'none',
-    '@media screen and (min-width: 1024px)': {
-      display: 'block',
+    mx: "auto",
+    display: "none",
+    "@media screen and (min-width: 1024px)": {
+      display: "block",
     },
     a: {
       fontSize: 2,
-      fontWeight: 'body',
+      fontWeight: "body",
       px: 5,
-      cursor: 'pointer',
-      lineHeight: '1.2',
-      transition: 'all 0.15s',
-      '&:hover': {
-        color: 'primary',
+      cursor: "pointer",
+      lineHeight: "1.2",
+      transition: "all 0.15s",
+      "&:hover": {
+        color: "primary",
       },
-      '&.active': {
-        color: 'primary',
+      "&.active": {
+        color: "primary",
       },
     },
   },

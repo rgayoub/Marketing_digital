@@ -11,10 +11,11 @@ import Partnership from 'assets/key-feature/partnership.svg';
 import Subscription from 'assets/key-feature/subscription.svg';
 import Support from 'assets/key-feature/support.svg';
 
+
 const data = [
   {
     id: 1,
-    imgSrc: Performance,
+    imgSrc: Performance,   
     altText: 'Design',
     title: 'Design',
     text: 'Créez des visuels attrayants et professionnels pour votre marque.',
