@@ -46,7 +46,7 @@ export default function Header({ className }) {
               onClick={handleContactClick}
               style={{
                 padding: '10px 20px',
-                backgroundColor: '#6a1b9a',
+                backgroundColor: 'rgba(153, 102, 0, 0.57)',
                 color: '#fff',
                 border: 'none',
                 cursor: 'pointer',

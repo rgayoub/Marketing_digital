@@ -125,7 +125,7 @@ export default function Subscribe() {
 
 const styles = {
   contentBox: {
-    backgroundColor: 'primary',
+    backgroundColor: 'rgba(153, 102, 0, 0.57)',
     textAlign: 'center',
     borderRadius: 10,
     py: ['60px', null, 8],
@@ -173,14 +173,14 @@ const styles = {
         boxShadow: '0 0 0 0px',
       },
       '::placeholder': {
-        color: 'primary',
+        color: 'rgba(153, 102, 0, 0.57)',
         opacity: 1,
       },
     },
     '.subscribe__btn': {
       flexShrink: 0,
       ml: [0, 2],
-      backgroundColor: ['text', 'primary'],
+      backgroundColor: ['text', 'rgba(153, 102, 0, 0.57)'],
       mt: [2, 0],
       py: ['15px'],
     },

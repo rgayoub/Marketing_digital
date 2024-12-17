@@ -88,7 +88,7 @@ const styles = {
     margin: '10px',
   },
   cardButton: {
-    backgroundColor: 'primary',
+    backgroundColor: 'rgba(153, 102, 0, 0.57)',
     color: 'white',
     padding: '10px 20px',
     borderRadius: '5px',

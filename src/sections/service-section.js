@@ -11,6 +11,7 @@ const data = {
   "Nous sommes une équipe passionnée par ce que nous faisons. Notre mission est de fournir des services de qualité en utilisant les dernières technologies et en apportant une valeur ajoutée à nos clients.",
   btnName: 'Commencer',
   btnURL: '#',
+
 };
 
 export default function CoreFeature() {

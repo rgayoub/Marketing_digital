@@ -242,8 +242,7 @@ export default {
   buttons: {
     menu: {
       display: [null, null, 'none'],
-    }, // default variant for MenuButton
-    // you can reference other values defined in the theme
+    },
     defaultBtn: {
       borderRadius: '45px',
       fontSize: ['14px', null, null, 2],
@@ -261,7 +260,7 @@ export default {
     primary: {
       variant: 'buttons.defaultBtn',
       color: 'white',
-      bg: 'primary',
+      bg: 'rgba(153, 102, 0, 0.57)', // Changer la couleur ici
       '&:hover': {
         boxShadow: 'rgba(233, 76, 84, 0.57) 0px 9px 20px -5px',
       },
@@ -269,7 +268,7 @@ export default {
     whiteButton: {
       variant: 'buttons.defaultBtn',
       color: 'heading_secondary',
-      bg: 'white',
+      bg: 'rgba(153, 102, 0, 0.57)', // Changer la couleur ici aussi
       '&:hover': {
         boxShadow: 'rgba(0, 0, 0, 0.5) 0px 12px 24px -10px',
       },
@@ -277,13 +276,13 @@ export default {
     secondary: {
       variant: 'buttons.defaultBtn',
       border: '2px solid',
-      borderColor: 'primary',
-      color: 'primary',
+      borderColor: 'rgba(153, 102, 0, 0.57)', // Changer la couleur ici aussi
+      color: 'rgba(153, 102, 0, 0.57)', // Changer la couleur ici aussi
       bg: 'transparent',
       padding: ['10px 15px', null, '15px 30px'],
       '&:hover': {
         color: 'white',
-        bg: 'primary',
+        bg: 'rgba(153, 102, 0, 0.57)', // Changer la couleur ici aussi
       },
     },
     textButton: {
@@ -297,6 +296,7 @@ export default {
       },
     },
   },
+  
   cards: {
     primary: {
       padding: 2,

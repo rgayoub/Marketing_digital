@@ -28,18 +28,18 @@ const data = [
     title: 'Publicité Digitale (Ads)',
     text:
       'Maximisez votre retour sur investissement grâce à des campagnes publicitaires ciblées sur Google Ads, Facebook Ads et d’autres plateformes.',
-  },
+  },
 ];
 
 export default function WorkFlow() {
   return (
     <Box sx={styles.workflow}>
       <Container>
-      <SectionHeader
+        <SectionHeader
           slogan="Découvrez comment cela fonctionne"
           title="Explorer les étapes"
           isWhite={true}
-        />
+        />
 
         <Grid sx={styles.grid}>
           {data.map((item) => (
@@ -59,7 +59,7 @@ export default function WorkFlow() {
 
 const styles = {
   workflow: {
-    backgroundColor: 'primary',
+    backgroundColor: 'rgba(153, 102, 0, 0.57)',
     backgroundImage: `url(${PatternBG.src})`,
     backgroundRepeat: `no-repeat`,
     backgroundPosition: 'center center',
@@ -108,6 +108,8 @@ const styles = {
       '@media screen and (max-width:1220px)': {
         display: 'none',
       },
+      // Flèches en blanc avec filtre CSS
+      filter: 'brightness(0) saturate(100%) invert(100%)', // Blanc
     },
     '&:nth-of-type(2n-1)::before': {
       backgroundImage: `url(${ArrowOdd.src})`,
