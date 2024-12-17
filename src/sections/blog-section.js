@@ -22,26 +22,19 @@ const data = [
     imgSrc: PostThumb1,
     altText: 'Creative',
     title: 'Création de contenu',
-    postLink: '/creative', // Lien propre pour chaque carte
+    postLink: '/creationcontenu', // Lien propre pour chaque carte
 
   },
   {
     id: 3,
-    imgSrc: PostThumb2,
-    altText: 'Startup',
-    title: 'Infographie',
-    postLink: '/infographie', // Lien propre pour chaque carte
-  },
-  {
-    id: 4,
     imgSrc: PostThumb1,
     altText: 'Creative',
     title: 'Community Management',
-    postLink: '/creative', // Lien propre pour chaque carte
+    postLink: '/management', // Lien propre pour chaque carte
 
   },
   {
-    id: 5,
+    id: 4,
     imgSrc: PostThumb1,
     altText: 'Creative2',
     title: 'Production audiovisuelle',
@@ -103,7 +96,7 @@ export default function BlogSection() {
     router.push(link); // Redirige vers la route correcte
   };
   return (
-    <Box sx={{ variant: 'section.news' }}>
+    <Box sx={{ variant: 'section.news' }} id="realisation">
       <Container>
         <SectionHeader
           slogan="our blog"

@@ -1,18 +1,18 @@
 export default [
   {
-    path: 'Accueil',
+    path: '/',
     label: 'Accueil',
   },
   {
-    path: 'Nos Services',
+    path: 'feature',
     label: 'Nos Services',
   },
   {
-    path: 'pricing',
+    path: 'quesommes',
     label: ' Qui sommes-nous',
   },
   {
-    path: 'Nos réalisations',
+    path: 'realisation',
     label: 'Nos réalisations',
   },
 ];

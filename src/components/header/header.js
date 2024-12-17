@@ -14,8 +14,21 @@ import { useRouter } from "next/navigation";
 export default function Header({ className }) {
   const router = useRouter();
 
+  
   const handleContactClick = () => {
     router.push('/contact'); // Redirige vers la route correcte
+  };
+
+  const handleClick = (path) => {
+    if (path === "/") {
+      // Redirection vers la racine de la page sans recharger
+      router.push('/');  // Cette ligne gère la redirection vers la racine
+    } else {
+      // Utilisation de react-scroll pour les autres chemins
+      document.querySelector(`#${path}`)?.scrollIntoView({ 
+        behavior: "smooth" 
+      });
+    }
   };
 
   return (
@@ -30,6 +43,7 @@ export default function Header({ className }) {
                 activeClass="active"
                 to={path}
                 spy={true}
+                onClick={() => handleClick(path)}  // Appel de la fonction handleClick avec le path
                 smooth={true}
                 offset={-70}
                 duration={500}
